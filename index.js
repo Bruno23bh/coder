@@ -48,6 +48,7 @@ function guardarTarea(e) {
 function agruparTareas(Tarea) {
 
     const lista = document.createElement("div");
+    lista.setAttribute("class","mi-lista");
 
     const nameTarea = document.createElement("h3");
     nameTarea.setAttribute("class","titulo-tarea");

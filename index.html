@@ -10,6 +10,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
          <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500&family=Rock+3D&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500&family=Rock+3D&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./index.css">
         <title>ToDoList</title>
         
@@ -18,25 +20,23 @@
     <body>
      
      
-        <nav class="navbar navbar-light light">
-            <div class="container-fluid">
-              <h1 class="navbar-brand">
-               
-              To Do List!
+        <nav id="nav-bar">
+            <div class="">
+              <h1 id="todo">
+               To Do List!
               </h1>
             </div>
           </nav>
       
-        <div id="form" class="container d-flex justify-content-between align-bottom " >
+        <div id="form" >
             <form id="listaDeTareas">
                 <input id="tarea" type="text" autocomplete="off" placeholder="Tarea" autofocus required/>
-                <input id="dia" type="datetime-local" autocomplete="off" placeholder="Día y horario de la tarea" required/>
+                <input id="dia" type="datetime-local" autocomplete="off"  required/>
                 <input id="categoria" type="text" autocomplete="off" placeholder="Categoria" required />
                 <input id="button" type="submit" value="Agregar Tarea" class="btn btn-success" onclick="noOcultar();"/>
-               
             </form>
         </div>
-        <div id="listado" class="" role="alert" style="display: none;"></div>
+        <div id="listado" class=""  style="display: none;"></div>
        
         <div id="tiempo-real">
             <div id="box1">
@@ -45,10 +45,10 @@
             </div>
             <div id="box2">
                 <h2 id="ubi"></h2>
-                <img id="icono-animado" src="" alt="">
+                <img id="icono-animado" style="height: 100px; width: 130px;" >
             </div>
             <div id="box3">
-                <h3></h3>
+                <h3>Velicidad del Viento</h3>
                 <h1 id="velocidad-viento"></h1>
 
             </div>

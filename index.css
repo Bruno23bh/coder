@@ -1,5 +1,31 @@
+*{
+  font-family: 'Red Hat Mono', monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
 body {
-  background-color: rgb(253, 253, 253);
+  background: #acb6e5;  
+  background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  
+  background: linear-gradient(to right, #86fde8, #acb6e5); 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+#nav-bar{
+  text-align: center;
+}
+
+
+
+
+
+#todo{
+  color: rgb(179, 109, 29);
 }
 
 #button {
@@ -31,4 +57,25 @@ body {
 
 .btn-eliminar {
   background-color: red;
+}
+
+
+#tiempo-real {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+#box1, #box2, #box3 {
+
+ display: inline-block;
+ text-align: center;
+ vertical-align: middle;
+ padding-top: 30px;
+ width: 300px;
+ height: 200px;
+ background: #bbc6d3;  
+ border-radius: 60px;
+ 
 }
