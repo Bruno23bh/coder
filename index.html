@@ -12,32 +12,38 @@
          <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500&family=Rock+3D&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500&family=Rock+3D&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Red+Hat+Mono:wght@400;500&family=Rock+3D&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="./index.css">
         <title>ToDoList</title>
         
     </head>
 
     <body>
-     
+ 
      
         <nav id="nav-bar">
             <div class="">
               <h1 id="todo">
                To Do List!
               </h1>
+            
             </div>
           </nav>
       
         <div id="form" >
             <form id="listaDeTareas">
                 <input id="tarea" class="tarea" type="text" autocomplete="off" placeholder="Tarea" autofocus required/>
-                <input id="dia" class="day" type="datetime-local" autocomplete="off"  required/>
+                <input id="dia" class="day" type="datetime-local" autocomplete="off" required/>
                 <input id="categoria" class="categ" type="text" autocomplete="off" placeholder="Categoria" required />
                 <input id="button" type="submit" value="Agregar Tarea" class="btn btn-success" onclick="noOcultar();"/>
             </form>
         </div>
    
-        <div id="listado" class=""  style="display: none;"></div>
+        <div id="listado" class=""  style="display: none;">
+    
+        </div>
        
         <div id="tiempo-real">
             <div id="box1">
@@ -54,7 +60,7 @@
 
             </div>
         </div>
-      
+        
         <script src="./index.js"></script>
         <script src="./temp.js"></script>
        

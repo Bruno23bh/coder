@@ -50,6 +50,13 @@ function agruparTareas(Tarea) {
     const lista = document.createElement("div");
     lista.setAttribute("class","mi-lista");
 
+    const check = document.createElement("input");
+    check.setAttribute("class", "check-list");
+    check.type = "checkbox"
+     
+     lista.appendChild(check);
+
+
     const nameTarea = document.createElement("h3");
     nameTarea.setAttribute("class","titulo-tarea");
     nameTarea.textContent = `${Tarea.tarea}`;
@@ -69,7 +76,7 @@ function agruparTareas(Tarea) {
 
     const diferenciaEnFechas = document.createElement("div");
     diferenciaEnFechas.setAttribute("class","fecha-dif");
-    diferenciaEnFechas.textContent = `Días restantes para realizar tarea: ${diferencia}`
+    diferenciaEnFechas.textContent = `Días restantes: ${diferencia}`
     lista.appendChild(diferenciaEnFechas);
 
     const namecategoria = document.createElement("div");
@@ -87,6 +94,8 @@ function agruparTareas(Tarea) {
     boton.addEventListener("click", borrarTarea,);
 
     lista.appendChild(boton);
+
+ 
 
     return lista;
 

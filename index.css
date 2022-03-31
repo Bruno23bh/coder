@@ -1,31 +1,43 @@
 *{
   font-family: 'Red Hat Mono', monospace;
+ 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   
 }
 body {
-  background: #acb6e5;  
-  background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  
-  background: linear-gradient(to right, #86fde8, #acb6e5); 
+ 
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-
 }
+
+
+#form{
+
+  height: 40px;
+  margin-left: 15%;
+}
+
 .tarea{
+  display: inline-block;
+  height: 20%;
   text-align: center;
   border-radius: 30px;
  border-color: #86fde8;
 }
 .day{
+  display: inline-block;
+  height: 20%;
   text-align: center;
   border-radius: 30px;
   border-color: #86fde8;
 }
 .categ{
+  display: inline-block;
+  height: 20%;
   text-align: center;
   border-radius: 30px;
   border-color: #86fde8;
@@ -36,109 +48,189 @@ body {
   text-align: center;
 }
 
-
 #form{
   margin-left: 15%;
 }
 
-#listado{
-  margin-top: 5%;
+
+ 
+ @keyframes shake3856 {
+  0% {
+   -webkit-transform: translate(0);
+   transform: translate(0);
+  }
+ 
+  20% {
+   -webkit-transform: translate(-2px, 2px);
+   transform: translate(-2px, 2px);
+  }
+ 
+  40% {
+   -webkit-transform: translate(-2px, -2px);
+   transform: translate(-2px, -2px);
+  }
+ 
+  60% {
+   -webkit-transform: translate(2px, 2px);
+   transform: translate(2px, 2px);
+  }
+ 
+  80% {
+   -webkit-transform: translate(2px, -2px);
+   transform: translate(2px, -2px);
+  }
+ 
+  100% {
+   -webkit-transform: translate(0);
+   transform: translate(0);
+  }
+ } 
+
+ #button {
+  --hover-shadows: 16px 16px 33px #121212,
+                    -16px -16px 33px #303030;
+  --accent: rgb(238, 0, 0);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 1.1em;
+  background-color: #212121;
+  color: white;
+  padding: 5px 5px;
+  transition: box-shadow ease-in-out 0.3s,
+              background-color ease-in-out 0.1s,
+              letter-spacing ease-in-out 0.1s,
+              transform ease-in-out 0.1s;
+  box-shadow: 5px 5px 5px #1c1c1c,
+              -5px -5px 5px #262626;
+ }
+ 
+ #button:hover {
+  animation: shake3856 0.3s linear infinite both;
+  box-shadow: var(--hover-shadows);
+ }
+ 
+ #button:active {
+  box-shadow: var(--hover-shadows),
+               var(--accent) 0px 0px 30px 5px;
+  background-color: var(--accent);
+  transform: scale(0.95);
+ }
+
+ .mi-lista{
+   display: inline-block;
+   width: 430px;
+   height: 200px;
+ 
+ }
+
+ 
+
+ #listado{
+   display: inline;
   margin-bottom: 5%;
   margin-left: 35%;
 }
 
-
-
 #todo{
-  color: rgb(212, 174, 130);
+  margin: auto;
+  color: rgb(48, 46, 44);
 }
 
-#button {
-  font-size: 16px;
-  padding: 1em 3.3em;
-  transform: perspective(200px) rotateX(15deg);
-  color: rgb(70, 49, 49);
-  font-weight: 900;
-  border: none;
-  border-radius: 35px;
-  background: linear-gradient(
-    0deg,
-    rgba(63, 94, 251, 1) 0%,
-    rgba(70, 135, 252, 1) 100%
-  );
-  box-shadow: rgba(151, 45, 42, 0.2) 0px 40px 29px 0px;
-  will-change: transform;
-  transition: all 0.3s;
-  border-bottom: 2px solid rgba(70, 135, 252, 1);
+.check-list{
+  margin-bottom: 0;
+  margin-left: 95%;
 }
 
-#button:hover {
-  transform: perspective(180px) rotateX(30deg) translateY(2px);
+.titulo-tarea{
+  margin: auto;
+  padding-left: 30%;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: rgb(7, 7, 7);
+}
+.fecha{
+  padding-left: 10%;
+  font-size: large;
 }
 
-#button:active {
-  transform: perspective(170px) rotateX(36deg) translateY(5px);
+.fecha-dif{
+  padding-left: 10%;
+  font-size: large;
+}
+
+.categoria{
+  padding-left: 10%;
+  font-size: large;
+}
+
+
+.btn-eliminar {
+  margin-top: 1%;
+  margin-left: 30%;
+ --green: #fd1b1b;
+ font-size: 15px;
+ padding: 7px 20px;
+ letter-spacing: 0.06em;
+ position: relative;
+ font-family: inherit;
+ border-radius: 0.6em;
+ overflow: hidden;
+ transition: all 0.3s;
+ line-height: 1.4em;
+ border: 2px solid var(--green);
+ background: linear-gradient(to right, rgba(253, 27, 27, 0.1) 1%, transparent 40%,transparent 60% , rgba(245, 63, 63, 0.1) 100%);
+ color: var(--green);
+ box-shadow: inset 0 0 5px rgba(253, 27, 27, 0.4), 0 0 9px 3px rgba(243, 0, 0, 0.1);
+}
+
+.btn-eliminar:hover {
+ animation: shake3856 0.3s linear infinite both;
+ color: #ff8282;
+ box-shadow: inset 0 0 5px rgba(240, 0, 0, 0.6), 0 0 9px 3px rgba(248, 0, 0, 0.2);
+}
+
+.btn-eliminar:before {
+ content: "";
+ position: absolute;
+ left: -4em;
+ width: 4em;
+ height: 100%;
+ top: 0;
+ transition: transform .4s ease-in-out;
+ background: linear-gradient(to right, transparent 1%, rgba(253, 27, 27, 0.1) 40%,rgba(255, 1, 1, 0.959) 60% , transparent 100%);
+}
+
+.btn-eliminar:hover:before {
+ transform: translateX(15em);
 }
 
 
 
+ 
 
 #tiempo-real {
+ 
   margin-left: 20%;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 5px;
 }
 
+
+
 #box1, #box2, #box3 {
-   align-items: center;
- display: inline-block;
+  
+  margin-top: 10%;
+  align-items: center;
+ display: inline;
  vertical-align: middle;
  width: 150px;
  height: auto;
  border-radius: 30px;
- background: #e0e0e0;
- box-shadow: 15px 15px 30px #bebebe,
-             -15px -15px 30px #ffffff;
+ background: #8f8d8d;
+ box-shadow: 5px 5px 5px #7e5c5c,
+             -5px -5px 5px #a7a5a5;
 }
 
-
- .btn-eliminar {
-  --green: #fd1b1b;
-  font-size: 15px;
-  padding: 0.7em 2.7em;
-  letter-spacing: 0.06em;
-  position: relative;
-  font-family: inherit;
-  border-radius: 0.6em;
-  overflow: hidden;
-  transition: all 0.3s;
-  line-height: 1.4em;
-  border: 2px solid var(--green);
-  background: linear-gradient(to right, rgba(253, 27, 27, 0.1) 1%, transparent 40%,transparent 60% , rgba(245, 63, 63, 0.1) 100%);
-  color: var(--green);
-  box-shadow: inset 0 0 10px rgba(253, 27, 27, 0.4), 0 0 9px 3px rgba(243, 0, 0, 0.1);
- }
- 
- .btn-eliminar:hover {
-  color: #ff8282;
-  box-shadow: inset 0 0 10px rgba(240, 0, 0, 0.6), 0 0 9px 3px rgba(248, 0, 0, 0.2);
- }
- 
- .btn-eliminar:before {
-  content: "";
-  position: absolute;
-  left: -4em;
-  width: 4em;
-  height: 100%;
-  top: 0;
-  transition: transform .4s ease-in-out;
-  background: linear-gradient(to right, transparent 1%, rgba(253, 27, 27, 0.1) 40%,rgba(255, 1, 1, 0.959) 60% , transparent 100%);
- }
- 
- .btn-eliminar:hover:before {
-  transform: translateX(15em);
- }
-
- 
