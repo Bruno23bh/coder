@@ -18,7 +18,7 @@ let velocidadViento = document.getElementById('velocidad-viento');
 
              const url1 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=86ed3c3ab3b875e698cec6322e90aa90&units=metric&lang=es`
            
-
+               
             fetch(url1)
             .then( response => { return response.json()})
             .then( datos => {

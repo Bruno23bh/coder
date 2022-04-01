@@ -18,7 +18,8 @@ body {
 #form{
 
   height: 40px;
-  margin-left: 15%;
+  margin-left: 25%;
+  margin-top: 10px;
 }
 
 .tarea{
@@ -47,12 +48,6 @@ body {
   margin-top: 30px;
   text-align: center;
 }
-
-#form{
-  margin-left: 15%;
-}
-
-
  
  @keyframes shake3856 {
   0% {
@@ -127,9 +122,10 @@ body {
  
 
  #listado{
-   display: inline;
+   display: inline-flex;
   margin-bottom: 5%;
-  margin-left: 35%;
+  margin-left: 25%;
+  margin-top: 10px;
 }
 
 #todo{
@@ -138,8 +134,11 @@ body {
 }
 
 .check-list{
+  
+ position: absolute;
   margin-bottom: 0;
-  margin-left: 95%;
+  margin-left: auto;
+  margin-top: 10px;
 }
 
 .titulo-tarea{
